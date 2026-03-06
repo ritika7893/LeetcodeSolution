@@ -1,0 +1,22 @@
+class Solution(object):
+    def prefixesDivBy5(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[bool]
+        """
+        n=len(nums)
+        
+        res=[]
+        num=0
+        for bit in nums:
+            num=num*2+bit
+            if num%5  == 0:
+                res.append(True)
+            else:
+                res.append(False)
+        
+        return res
+
+
+
+               
